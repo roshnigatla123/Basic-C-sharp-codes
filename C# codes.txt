@@ -1,0 +1,90 @@
+REVERSE OF STRING
+public string ReverseString(string s)
+{
+    char[] charArray = s.ToCharArray();
+    Array.Reverse(charArray);
+    return new string(charArray);
+}
+
+
+
+PALINDRONE 
+public bool IsPalindrome(string s)
+{
+    int left = 0;
+    int right = s.Length - 1;
+
+    while (left < right)
+    {
+        if (s[left] != s[right])
+        {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
+
+
+
+MAXIMUM ELEMENT
+public int FindLargest(int[] arr)
+{
+    int max=arr[0];
+     foreach(int num in arr)
+        {
+         if(num>max)
+          {
+            max=num;
+           }
+         }
+    return max;
+}
+
+
+
+
+FIZZBUZZ PROBLEM
+public void FizzBUzz()
+ {
+    for( int i=1;i<=100;i++)
+     {
+       if(i%3==0 && i%5==0)
+{
+  Console.WriteLine("FizzBUzz");
+}
+else if(i%3==0)
+{
+Console.WriteLine("Buzz");
+}
+else
+{
+Console.WriteLine(i);
+}
+}
+}
+
+
+REMOVE ALL DUPLICATES
+public int[] RemoveDuplicates(int[] nums)
+{
+  HashSet<int> set= new HashSet<int>(nums);
+return set.ToArray();
+}
+
+
+FIBONACCI SERIES
+public int[] GenerateFibonacci(int n)
+{
+  if(n<=0) return new int[0];
+  if(n==1) return new int[] {0};
+  int[] fib = new int[n];
+  fib[0]=0;
+  fib[1]=1;
+   for(int i=2;i<n;i++)
+    {
+     fib[i]=fib[i-1]+fib[i-2];
+    }
+return fib;
+}
